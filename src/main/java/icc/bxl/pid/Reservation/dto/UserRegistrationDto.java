@@ -1,6 +1,7 @@
 package icc.bxl.pid.Reservation.dto;
 
 import icc.bxl.pid.Reservation.validation.PasswordMatches;
+import icc.bxl.pid.Reservation.validation.StrongPassword;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -21,6 +22,7 @@ public class UserRegistrationDto {
 
     @NotBlank(message = "Le mot de passe est obligatoire")
     @Size(min = 6, message = "Le mot de passe doit contenir au moins 6 caractères")
+    @StrongPassword
     private String password;
 
     @NotBlank(message = "Veuillez confirmer votre mot de passe")

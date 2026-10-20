@@ -1,10 +1,8 @@
 
-package icc.bxl.pid.Reservation;
-
-import java.util.List;
+package icc.bxl.pid.Reservation.Controller;
 
 import icc.bxl.pid.Reservation.Artist;
-import icc.bxl.pid.Reservation.ArtistService;
+import icc.bxl.pid.Reservation.service.ArtistService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import icc.bxl.pid.Reservation.Artist;
-import icc.bxl.pid.Reservation.ArtistService;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller

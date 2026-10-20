@@ -1,6 +1,6 @@
 package icc.bxl.pid.Reservation.service;
 
-import icc.bxl.pid.Reservation.Artist;
+import icc.bxl.pid.Reservation.model.Artist;
 import icc.bxl.pid.Reservation.repository.ArtistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

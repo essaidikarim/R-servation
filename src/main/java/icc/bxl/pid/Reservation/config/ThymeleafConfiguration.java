@@ -1,4 +1,4 @@
-package icc.bxl.pid.Reservation;
+package icc.bxl.pid.Reservation.config;
 
 import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 import org.springframework.context.annotation.Bean;

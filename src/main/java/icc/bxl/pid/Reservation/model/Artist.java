@@ -1,4 +1,4 @@
-package icc.bxl.pid.Reservation;
+package icc.bxl.pid.Reservation.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

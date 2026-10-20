@@ -1,7 +1,7 @@
 
 package icc.bxl.pid.Reservation.Controller;
 
-import icc.bxl.pid.Reservation.Artist;
+import icc.bxl.pid.Reservation.model.Artist;
 import icc.bxl.pid.Reservation.service.ArtistService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;

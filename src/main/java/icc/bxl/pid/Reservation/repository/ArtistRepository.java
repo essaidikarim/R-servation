@@ -1,6 +1,6 @@
 package icc.bxl.pid.Reservation.repository;
 
-import icc.bxl.pid.Reservation.Artist;
+import icc.bxl.pid.Reservation.model.Artist;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

@@ -75,5 +75,26 @@ public class ArtistController {
 
         return "redirect:/artists/"+artist.getId();
     }
+    @GetMapping("/artists/create")
+    public String create(Model model) {
+        Artist artist = new Artist();
+
+        model.addAttribute("artist", artist);
+
+        return "artist/create";
+    }
+
+    @PostMapping("/artists/create")
+    public String store(@Valid @ModelAttribute Artist artist, BindingResult bindingResult, Model model) {
+
+        if (bindingResult.hasErrors()) {
+            return "artist/create";
+        }
+
+        service.addArtist(artist);
+
+        return "redirect:/artists/"+artist.getId();
+    }
+
 
 }

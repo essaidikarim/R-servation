@@ -1,6 +1,7 @@
 package icc.bxl.pid.Reservation.service;
 
 import icc.bxl.pid.Reservation.UserRole;
+import icc.bxl.pid.Reservation.dto.UserProfileDto;
 import icc.bxl.pid.Reservation.dto.UserRegistrationDto;
 import icc.bxl.pid.Reservation.model.User;
 import icc.bxl.pid.Reservation.repository.UserRepository;
@@ -55,9 +56,27 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public void updateUserFromDto(UserProfileDto dto) {
+        User user = userRepository.findById(dto.getId())
+                .orElseThrow(() -> new RuntimeException("Utilisateur introuvable"));
+
+        user.setFirstname(dto.getFirstname());
+        user.setLastname(dto.getLastname());
+        user.setEmail(dto.getEmail());
+        user.setLangue(dto.getLangue());
+
+        // Si un nouveau mot de passe est fourni et validé
+        if (dto.getPassword() != null && !dto.getPassword().isBlank()) {
+            user.setPassword(passwordEncoder.encode(dto.getPassword()));
+        }
+
+        userRepository.save(user);
+    }
+
     public void deleteUser(long id) {
         userRepository.deleteById(id);
     }
 }
+
 
 

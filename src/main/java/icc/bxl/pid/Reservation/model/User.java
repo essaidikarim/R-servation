@@ -13,13 +13,21 @@ import java.time.LocalDateTime;
 @Table(name="users")
 public class User {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
+
+    @Column(unique = true, nullable = false)
     private String login;
+
+    @Column(nullable = false)
     private String password;
+
     private String firstname;
     private String lastname;
+
+    @Column(unique = true, nullable = false)
     private String email;
+
     private String langue;
 
     @Enumerated(EnumType.STRING)
@@ -31,6 +39,6 @@ public class User {
     public String toString() {
         return login + " (" + firstname + " " + lastname + " - " + role + ")";
     }
-
 }
+
 
